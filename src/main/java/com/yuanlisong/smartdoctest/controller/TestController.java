@@ -1,9 +1,10 @@
 package com.yuanlisong.smartdoctest.controller;
 
 import com.yuanlisong.smartdoctest.common.CommonResult;
+import com.yuanlisong.smartdoctest.entity.PmsBrand;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,12 +17,10 @@ public class TestController {
 	/**
 	 * 分页查询品牌列表
 	 *
-	 * @param pageNum 页码
-	 * @param pageSize 分页大小
+	 * @param pmsBrand 查询条件
 	 */
-	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public CommonResult listBrand(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
-	                              @RequestParam(value = "pageSize", defaultValue = "3") Integer pageSize) {
+	@RequestMapping(value = "/list", method = RequestMethod.POST)
+	public CommonResult listBrand(@RequestBody PmsBrand pmsBrand) {
 
 		return new CommonResult(200, "测试消息");
 	}
