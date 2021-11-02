@@ -1,0 +1,130 @@
+{
+  "info": {
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "17a4c820-09d8-44d7-be80-e9c211142a4e",
+    "name": "smart-doc-test"
+  },
+  "item": [
+    {
+      "name": "商品品牌管理",
+      "item": [
+        {
+          "name": "分页查询品牌列表",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "pageNum",
+                  "type": "text",
+                  "description": "页码",
+                  "value": "1"
+                },
+                {
+                  "key": "pageSize",
+                  "type": "text",
+                  "description": "分页大小",
+                  "value": "3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:4455/test/list?pageNum\u003d1\u0026pageSize\u003d3",
+              "protocol": "http",
+              "path": [
+                "test",
+                "list"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "4455",
+              "query": [
+                {
+                  "key": "pageNum",
+                  "value": "1",
+                  "description": "页码"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "3",
+                  "description": "分页大小"
+                }
+              ],
+              "variable": []
+            },
+            "description": "分页查询品牌列表",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer tokenValue",
+                "type": "text",
+                "disabled": false,
+                "name": "Authorization",
+                "description": "token请求头的值"
+              }
+            ]
+          },
+          "description": "分页查询品牌列表"
+        }
+      ]
+    },
+    {
+      "name": "2商品品牌管理",
+      "item": [
+        {
+          "name": "分页查询品牌列表",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "pageNum",
+                  "type": "text",
+                  "description": "页码",
+                  "value": "1"
+                },
+                {
+                  "key": "pageSize",
+                  "type": "text",
+                  "description": "分页大小",
+                  "value": "3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:4455/test2/list?pageNum\u003d1\u0026pageSize\u003d3",
+              "protocol": "http",
+              "path": [
+                "test2",
+                "list"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "4455",
+              "query": [
+                {
+                  "key": "pageNum",
+                  "value": "1",
+                  "description": "页码"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "3",
+                  "description": "分页大小"
+                }
+              ],
+              "variable": []
+            },
+            "description": "分页查询品牌列表",
+            "header": []
+          },
+          "description": "分页查询品牌列表"
+        }
+      ]
+    }
+  ]
+}
